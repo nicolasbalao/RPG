@@ -86,13 +86,13 @@ int main()
              << endl
              << "Recap:" << endl;
         //boucle recap
-        for (int i(0); i < nbJoueurs; i++)
+        for (int i(0); i < Joueurs.size(); i++)
         {
             etatJoueurs(Joueurs[i]);
         }
 
         //Phase de combat| boucle TOUR
-        for (int i(0); i < nbJoueurs; i++)
+        for (int i(0); i < Joueurs.size(); i++)
         {
             string cibleNom;
             int attaque;
@@ -108,15 +108,16 @@ int main()
                  << Joueurs[i]->getNom() << " attaque " << endl
                  << "Cibles: ";
             //nom des autres joueur
-            for (int j(0); j < nbJoueurs; j++)
+            for (int j(0); j < Joueurs.size(); j++)
             {
                 if (Joueurs[i]->getNom() == Joueurs[j]->getNom() || Joueurs[j]->estVivant() == false)
                 {
+
                     continue;
                 }
                 else
                 {
-                    cout << Joueurs[j]->getNom();
+                    cout << Joueurs[j]->getNom() << " ";
                 }
             }
             //choix de la cible
@@ -131,10 +132,12 @@ int main()
                  << "boire potion(3) " << endl
                  << ": ";
             cin >> attaque;
+            int indexCible = 0;
             for (int ii(0); ii < Joueurs.size(); ii++)
             {
                 if (cibleNom == Joueurs[ii]->getNom())
                 {
+                    indexCible = ii;
                     switch (attaque)
                     {
                     case 1:
@@ -151,12 +154,19 @@ int main()
                     }
                 }
             }
+            cout << Joueurs[i]->getNom() << " attaque " << cibleNom << endl;
+            if (!Joueurs[indexCible]->estVivant())
+            {
+                cout << cibleNom << " est mort!!" << endl
+                     << endl;
+            }
         }
         //test de vie des joueurs | boucle test vie
         for (int index(0); index < Joueurs.size(); index++)
         {
             if (!Joueurs[index]->estVivant())
             {
+
                 Joueurs.erase(Joueurs.begin() + index);
             }
         }
@@ -166,6 +176,7 @@ int main()
             cout << Joueurs[0]->getNom() << " est le GRAND VAINCEUR du tournoi." << endl;
             jouer = 0;
         }
+        tour++;
     }
 
     return 0;

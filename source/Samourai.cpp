@@ -14,13 +14,13 @@ void Samourai::afficherEtat() const
          << "Vie: " << m_vie << endl
          << "Energie: " << m_energie << endl
          << "Potions: " << m_nbPotion << endl
-         << "Compétence: " << m_nomCompetence << endl;
+         << "Compétence: " << m_nomCompetence << " 100 de degats" << endl;
     m_arme.afficher();
 }
 
 void Samourai::competence(Personnage *cible)
 {
-    cout << "attaque double tranchant" << endl;
+    cout << "attaque double tranchant: " << endl;
     for (int i(0); i < 2; i++)
     {
         attaquer(cible);
