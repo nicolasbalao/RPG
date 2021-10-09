@@ -26,6 +26,7 @@ public:
     Samourai();
     Samourai(std::string nom);
     void afficherEtat() const;
+    void regeneration();
     void competence(Personnage *cible);
 };
 

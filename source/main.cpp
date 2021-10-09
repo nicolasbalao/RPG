@@ -12,16 +12,18 @@ game loop
     8. chaque joueur peut attaquer 1 fois par tour ou boire une potion
     9. le dernier joueur en vie gagne.
 
-    DO:
+    DONE:
     Classe Personnage
     Classe Samouraï
     Classe Sorcier
+    changer le fonctionnement des compétence (pouvoir choisir et afficher les compétence des Personnage).
+    systeme de mana; endurance et resistance 
 
     Amelioration:
-
-    changer le fonctionnement des compétence (pouvoir choisir et afficher les compétence des Personnage).
+    ajouter a personnage un attribut avec enum Exemple: brule, etourdi ...
+    classe Tank resistance coef de dégats
     changer DoubleTranchant trop pété.
-    trouver des amélioration
+    
 
 
 */
@@ -45,8 +47,20 @@ int main()
     string nomPersonnage;
     int nbJoueurs;
 
+    //NOM DU JEUX
+
     cout << "Combien de joueurs: ";
-    cin >> nbJoueurs;
+
+    //test nbJoueurs et bien un nombre
+    while (!(cin >> nbJoueurs))
+    {
+        nbJoueurs = 0;
+        cerr << "Nombre invalid" << endl;
+        cout << "Combien de joueurs: ";
+        cin >> nbJoueurs;
+        cin.clear();
+        cin.ignore();
+    }
     // setup
     for (int i(0); i < nbJoueurs; i++)
     {
@@ -81,6 +95,7 @@ int main()
 
     while (jouer == 1)
     {
+
         cout << "\033[2J\033[1;1H";
         cout << "TOUR " << tour << endl
              << endl
@@ -88,6 +103,7 @@ int main()
         //boucle recap
         for (int i(0); i < Joueurs.size(); i++)
         {
+            Joueurs[i]->regeneration();
             etatJoueurs(Joueurs[i]);
         }
 
@@ -128,7 +144,7 @@ int main()
             cout << endl
                  << "Attaque: "
                  << "base(1) "
-                 << "compétence(2) "
+                 << Joueurs[i]->getComptetence() << "(2) "
                  << "boire potion(3) " << endl
                  << ": ";
             cin >> attaque;
@@ -166,7 +182,7 @@ int main()
         {
             if (!Joueurs[index]->estVivant())
             {
-
+                delete Joueurs[index];
                 Joueurs.erase(Joueurs.begin() + index);
             }
         }
@@ -178,6 +194,7 @@ int main()
         }
         tour++;
     }
+    delete Joueurs[0];
 
     return 0;
 }

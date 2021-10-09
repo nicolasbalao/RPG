@@ -25,8 +25,9 @@ public:
     Sorcier();
     Sorcier(std::string nom);
     void afficherEtat() const;
-    void bouleDeFeu(Personnage *cible);
+    void competence(Personnage *cible);
     void bouleDeGlace();
+    void regeneration();
 };
 
 #endif

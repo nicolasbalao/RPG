@@ -4,7 +4,7 @@ using namespace std;
 
 Tank::Tank() : Personnage(), m_resistance(100) {}
 
-Tank::Tank(string nom) : Personnage(nom, "Tank", "Massu des enfer", "Coup de massu ++", 30, 500, 1) {}
+Tank::Tank(string nom) : Personnage(nom, "Tank", "Massu des enfer", "Coup de massu ++", 30, 500, 1), m_resistance(100) {}
 
 void Tank::afficherEtat() const
 {
@@ -18,7 +18,28 @@ void Tank::afficherEtat() const
     m_arme.afficher();
 }
 
-void Tank::coupDeMasse(Personnage *cible)
+//coup de massus ++
+void Tank::competence(Personnage *cible)
 {
-    attaquer(cible);
+    if (m_resistance < 30)
+    {
+        cout << "Pas asser de resistance!" << endl;
+    }
+    else
+    {
+        m_arme.setDegats(40);
+        cout << "degtas: " << m_arme.getDegats() << endl;
+        attaquer(cible);
+        m_arme.setDegats(30);
+        m_resistance -= 30;
+    }
+}
+
+void Tank::regeneration()
+{
+    m_resistance += 10;
+    if (m_resistance > 100)
+    {
+        m_resistance = 100;
+    }
 }

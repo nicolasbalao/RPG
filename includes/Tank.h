@@ -27,7 +27,8 @@ public:
     Tank();
     Tank(std::string nom);
     void afficherEtat() const;
-    void coupDeMasse(Personnage *cible);
+    void competence(Personnage *cible);
+    void regeneration();
 };
 
 #endif

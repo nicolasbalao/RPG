@@ -18,8 +18,26 @@ void Sorcier::afficherEtat() const
     m_arme.afficher();
 }
 
-void Sorcier::bouleDeFeu(Personnage *cible)
+//boule de feu
+void Sorcier::competence(Personnage *cible)
 {
-    cout << "Boulde de feu" << endl;
-    attaquer(cible);
+    if (m_mana < 70)
+    {
+        cout << "Pas asser de mana";
+    }
+    else
+    {
+        m_mana -= 70;
+        cout << "Boulde de feu" << endl;
+        attaquer(cible);
+    }
+}
+
+void Sorcier::regeneration()
+{
+    m_mana += 40;
+    if (m_mana > 200)
+    {
+        m_mana = 200;
+    }
 }

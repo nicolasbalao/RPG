@@ -15,6 +15,7 @@ public:
     Arme(std::string nomArme, int degatsArme);
     void afficher() const;
     int getDegats() const;
+    void setDegats(int degats);
 };
 
 #endif

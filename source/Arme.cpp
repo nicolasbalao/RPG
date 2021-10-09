@@ -17,3 +17,8 @@ int Arme::getDegats() const
 {
     return m_degatsArme;
 }
+
+void Arme::setDegats(int degats)
+{
+    m_degatsArme = degats;
+}

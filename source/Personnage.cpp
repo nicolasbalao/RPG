@@ -49,9 +49,18 @@ void Personnage::afficherEtat() const
     m_arme.afficher();
 }
 
+void Personnage::regeneration()
+{
+}
+
 string Personnage::getNom() const
 {
     return m_nom;
+}
+
+string Personnage::getComptetence() const
+{
+    return m_nomCompetence;
 }
 
 bool Personnage::monNom(string nom) const

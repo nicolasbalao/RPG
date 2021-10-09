@@ -33,8 +33,10 @@ public:
     bool estVivant() const;
     bool monNom(std::string nom) const;
     virtual void competence(Personnage *cible);
+    virtual void regeneration();
     virtual void afficherEtat() const;
     std::string getNom() const;
+    std::string getComptetence() const;
 };
 
 #endif
