@@ -118,6 +118,18 @@ int main()
             {
                 continue;
             }
+            //test joueurs etourdi et brulure
+            if (Joueurs[i]->getEtat() == "etourdi")
+            {   
+                cout << Joueurs[i]->getNom() << "est Etourdi" << endl;
+                continue;
+            }
+            else if (Joueurs[i]->getEtat() == "brulure")
+            {
+                Joueurs[i]->brulure();
+                Joueurs[i]->setEtat(""); // arrete l'effet de brulure
+            }
+
             //Présentation combats
             cout << "TOUR" << tour << endl
                  << endl

@@ -14,7 +14,9 @@ void Tank::afficherEtat() const
          << "Vie: " << m_vie << endl
          << "Resistance: " << m_resistance << endl
          << "Potions: " << m_nbPotion << endl
-         << "Compétence: " << m_nomCompetence << endl;
+         << "Compétence: " << m_nomCompetence << endl
+         << "Etat: " << m_etat << endl;
+    ;
     m_arme.afficher();
 }
 
@@ -28,10 +30,10 @@ void Tank::competence(Personnage *cible)
     else
     {
         m_arme.setDegats(40);
-        cout << "degtas: " << m_arme.getDegats() << endl;
         attaquer(cible);
         m_arme.setDegats(30);
         m_resistance -= 30;
+        cible->setEtat("etourdi");
     }
 }
 

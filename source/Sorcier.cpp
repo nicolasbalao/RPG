@@ -14,7 +14,8 @@ void Sorcier::afficherEtat() const
          << "Vie: " << m_vie << endl
          << "Mana: " << m_mana << endl
          << "Potions: " << m_nbPotion << endl
-         << "Compétence: " << m_nomCompetence << endl;
+         << "Compétence: " << m_nomCompetence << endl
+         << "Etat: " << m_etat << endl;
     m_arme.afficher();
 }
 
@@ -28,8 +29,9 @@ void Sorcier::competence(Personnage *cible)
     else
     {
         m_mana -= 70;
-        cout << "Boulde de feu" << endl;
+        cout << "Boulde de feu (prochain tour 10 degats en dote)" << endl;
         attaquer(cible);
+        cible->setEtat("brulure");
     }
 }
 

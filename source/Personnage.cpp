@@ -19,6 +19,11 @@ void Personnage::attaquer(Personnage *cible)
     cible->recevoirDegats(m_arme.getDegats());
 }
 
+void Personnage::brulure()
+{
+    this->m_vie -= 10;
+}
+
 void Personnage::boirePotion()
 {
     if (m_nbPotion > 0)
@@ -26,6 +31,11 @@ void Personnage::boirePotion()
         m_vie += 20;
         m_nbPotion--;
     }
+}
+
+void Personnage::setEtat(string etat)
+{
+    m_etat = etat;
 }
 
 bool Personnage::estVivant() const
@@ -45,7 +55,8 @@ void Personnage::afficherEtat() const
          << "Classe: " << m_classe << endl
          << "Vie: " << m_vie << endl
          << "Potions: " << m_nbPotion << endl
-         << "Compétence: " << m_nomCompetence << endl;
+         << "Compétence: " << m_nomCompetence << endl
+         << "Etat" << m_etat << endl;
     m_arme.afficher();
 }
 
@@ -61,6 +72,11 @@ string Personnage::getNom() const
 string Personnage::getComptetence() const
 {
     return m_nomCompetence;
+}
+
+string Personnage::getEtat() const
+{
+    return m_etat;
 }
 
 bool Personnage::monNom(string nom) const

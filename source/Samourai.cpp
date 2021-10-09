@@ -14,7 +14,9 @@ void Samourai::afficherEtat() const
          << "Vie: " << m_vie << endl
          << "Energie: " << m_energie << endl
          << "Potions: " << m_nbPotion << endl
-         << "Compétence: " << m_nomCompetence << " 100 de degats" << endl;
+         << "Compétence: " << m_nomCompetence << " 100 de degats" << endl
+         << "Etat: " << m_etat << endl;
+    ;
     m_arme.afficher();
 }
 

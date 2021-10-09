@@ -20,6 +20,7 @@ protected:
     std::string m_nom;
     std::string m_classe; // Mage, assassin ...
     std::string m_nomCompetence;
+    std::string m_etat;
     int m_vie;
     int m_nbPotion;
     Arme m_arme;
@@ -29,7 +30,9 @@ public:
     Personnage(std::string name, std::string classe, std::string nomArme, std::string nomCompetence, int degatsArme, int vie, int nbPotion);
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage *cible);
+    void brulure();
     void boirePotion();
+    void setEtat(std::string etat);
     bool estVivant() const;
     bool monNom(std::string nom) const;
     virtual void competence(Personnage *cible);
@@ -37,6 +40,7 @@ public:
     virtual void afficherEtat() const;
     std::string getNom() const;
     std::string getComptetence() const;
+    std::string getEtat() const;
 };
 
 #endif
