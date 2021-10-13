@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/Arme.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/Arme.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/Arme.cpp"
+},
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/Personnage.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/Personnage.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/Personnage.cpp"
+},
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/Samourai.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/Samourai.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/Samourai.cpp"
+},
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/Sorcier.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/Sorcier.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/Sorcier.cpp"
+},
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/Tank.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/Tank.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/Tank.cpp"
+},
+{
+  "directory": "/home/tengu/Documents/Formation/C++/tp/PooRPG/build",
+  "command": "/bin/x86_64-linux-gnu-g++-10  -I/home/tengu/Documents/Formation/C++/tp/PooRPG/includes -g -o CMakeFiles/RPG.dir/source/main.cpp.o -c /home/tengu/Documents/Formation/C++/tp/PooRPG/source/main.cpp",
+  "file": "/home/tengu/Documents/Formation/C++/tp/PooRPG/source/main.cpp"
+}
+]

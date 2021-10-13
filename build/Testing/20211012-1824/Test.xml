@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20211012-1824-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.18.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="tengu"
+	OSRelease="5.10.0-kali7-amd64"
+	OSVersion="#1 SMP Debian 5.10.28-1kali1 (2021-04-12)"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="21"
+	ModelID="48"
+	ProcessorCacheSize="2048"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="3522"
+	TotalPhysicalMemory="4937"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2994.7"
+	>
+	<Testing>
+		<StartDateTime>Oct 12 20:24 CEST</StartDateTime>
+		<StartTestTime>1634063080</StartTestTime>
+		<TestList/>
+		<EndDateTime>Oct 12 20:24 CEST</EndDateTime>
+		<EndTestTime>1634063080</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
